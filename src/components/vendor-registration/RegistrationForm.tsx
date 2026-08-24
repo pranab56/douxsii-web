@@ -9,7 +9,6 @@ import { BusinessInfoStep } from "./BusinessInfoStep";
 import { StoreDetailsStep } from "./StoreDetailsStep";
 import { DocumentsStep } from "./DocumentsStep";
 import { ContactStep } from "./ContactStep";
-import { CategoriesStep } from "./CategoriesStep";
 import { SuccessStep } from "./SuccessStep";
 import { registrationSchema } from "../../lib/schema";
 import { useCreatePartnerRequestMutation } from "@/features/contact/contactApi";
@@ -19,7 +18,6 @@ const STEP_FIELDS: Record<number, string[]> = {
   2: ["storeName", "storeDescription", "storeUrl"],
   3: ["tradeLicense"],
   4: ["fullName", "whatsApp"],
-  5: ["categories"],
 };
 
 export const RegistrationForm: React.FC = () => {
@@ -30,7 +28,7 @@ export const RegistrationForm: React.FC = () => {
   const methods = useForm({
     resolver: zodResolver(registrationSchema),
     mode: "onChange",
-    defaultValues: { categories: [], tradeLicense: null, isLocationSelected: false },
+    defaultValues: { tradeLicense: null, isLocationSelected: false },
   });
   const { trigger, handleSubmit } = methods;
 
@@ -62,7 +60,7 @@ export const RegistrationForm: React.FC = () => {
 
       const res = await createPartnerRequest(formData).unwrap();
       if (res?.success || res) {
-        setStep(6);
+        setStep(5);
       } else {
         setSubmitError(res?.message || "Failed to submit request.");
       }
@@ -77,7 +75,6 @@ export const RegistrationForm: React.FC = () => {
       case 2: return <StoreDetailsStep />;
       case 3: return <DocumentsStep />;
       case 4: return <ContactStep />;
-      case 5: return <CategoriesStep />;
       default: return <SuccessStep />;
     }
   };
@@ -85,11 +82,11 @@ export const RegistrationForm: React.FC = () => {
   return (
     <FormProvider {...methods}>
       <div className="w-full max-w-4xl mx-auto flex flex-col items-center select-none">
-        {step <= 5 && <StepProgress currentStep={step} />}
+        {step <= 4 && <StepProgress currentStep={step} />}
 
         {/* Form Container Card */}
         <div className="w-full max-w-3xl rounded-[24px] sm:rounded-[28px] bg-[#280b11] border border-[#EF524626] shadow-[0_8px_32px_rgba(0,0,0,0.6)] p-5 sm:p-12 mb-8 sm:mb-12">
-          <form onSubmit={step === 5 ? handleSubmit(onSubmit) : (e) => e.preventDefault()}>
+          <form onSubmit={step === 4 ? handleSubmit(onSubmit) : (e) => e.preventDefault()}>
             {renderStep()}
 
             {submitError && (
@@ -98,7 +95,7 @@ export const RegistrationForm: React.FC = () => {
               </div>
             )}
 
-            {step <= 5 && (
+            {step <= 4 && (
               <div className="mt-8 pt-8 border-t border-[#3E1119]/60 flex items-center justify-between">
                 <button
                   type="button"
@@ -108,18 +105,18 @@ export const RegistrationForm: React.FC = () => {
                 >
                   <ChevronLeft size={14} /> Previous
                 </button>
-                <span className="text-[11px] text-[#F5E8FF] font-medium">Step {step} of 5</span>
+                <span className="text-[11px] text-[#F5E8FF] font-medium">Step {step} of 4</span>
                 <button
                   type="button"
                   disabled={isLoading}
-                  onClick={step === 5 ? handleSubmit(onSubmit) : handleNext}
+                  onClick={step === 4 ? handleSubmit(onSubmit) : handleNext}
                   className="px-6 py-2.5 rounded-full bg-[#6B000C] border border-[#FF7A75]/20 text-xs font-semibold text-white shadow-[0_0_20px_rgba(107,0,12,0.45)] hover:bg-[#850311] hover:border-[#FF7A75]/35 hover:shadow-[0_0_25px_rgba(133,3,17,0.6)] disabled:opacity-50 flex items-center gap-1.5 transition-all duration-300 cursor-pointer"
                 >
                   {isLoading ? (
                     <>
                       <Loader2 size={14} className="animate-spin" /> Submitting...
                     </>
-                  ) : step === 5 ? (
+                  ) : step === 4 ? (
                     "Submit Application"
                   ) : (
                     <>
@@ -136,4 +133,3 @@ export const RegistrationForm: React.FC = () => {
   );
 };
 export default RegistrationForm;
-

@@ -9,7 +9,6 @@ const STEPS = [
   { num: 2, label: "Store Details" },
   { num: 3, label: "Documents" },
   { num: 4, label: "Contact" },
-  { num: 5, label: "Categories" },
 ];
 
 export const StepProgress: React.FC<StepProgressProps> = ({ currentStep }) => {

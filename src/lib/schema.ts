@@ -14,7 +14,7 @@ export const registrationSchema = z.object({
     .refine((val) => val !== null && val !== undefined && val !== "", "Upload your trade license document"),
   fullName: z.string().min(1, "Enter your full name"),
   whatsApp: z.string().min(1, "Enter your WhatsApp number"),
-  categories: z.array(z.string()).min(1, "Select at least one category"),
+  categories: z.array(z.string()).optional(),
   latitude: z.string().optional(),
   longitude: z.string().optional(),
   address: z.string().optional(),
