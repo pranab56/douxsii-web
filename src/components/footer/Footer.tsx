@@ -33,9 +33,8 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start">
         {/* Brand block */}
         <div className="md:col-span-4 flex flex-col items-start gap-4">
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.png" alt="Douxsii Logo" width={32} height={32} className="object-contain" />
-            <span className="font-extrabold text-xl tracking-wide text-white font-serif">Douxsii</span>
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.png" alt="Brand Logo" width={300} height={100} className="h-10 sm:h-11 md:h-12 w-auto object-contain shrink-0" />
           </Link>
           <p className="text-[#F5E8FF73] text-xs sm:text-[13px] font-normal leading-relaxed max-w-sm">
             The luxury flower & gifting marketplace of the UAE. Connecting premium vendors with thousands of discerning customers.

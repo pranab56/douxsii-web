@@ -20,16 +20,15 @@ export const Navbar: React.FC = () => {
   return (
     <header className="w-full max-w-7xl mx-auto flex justify-between items-center z-30 py-5 px-6 sm:px-12 relative">
       {/* Brand logo */}
-      <Link href="/" className="flex items-center gap-2 z-30 shrink-0">
+      <Link href="/" className="flex items-center z-30 shrink-0 my-auto">
         <Image
           src="/logo.png"
-          alt="Douxsii Logo"
-          width={48}
-          height={48}
+          alt="Brand Logo"
+          width={300}
+          height={100}
           priority
-          className="object-cover w-12 h-12 shrink-0"
+          className="h-10 sm:h-11 md:h-12 w-auto object-contain shrink-0"
         />
-        <span className="font-extrabold text-2xl tracking-wide text-white font-serif select-none">Douxsii</span>
       </Link>
 
       {/* Navigation middle links (desktop) */}
