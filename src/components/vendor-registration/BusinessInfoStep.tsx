@@ -518,48 +518,7 @@ export const BusinessInfoStep: React.FC = () => {
     (errors.city?.message as string) ||
     (errors.isLocationSelected?.message as string);
 
-  const renderBadge = (item: SuggestionItem) => {
-    if (item.isCustom) {
-      return (
-        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 shrink-0">
-          <PlusCircle size={10} /> Select Location
-        </span>
-      );
-    }
 
-    switch (item.level) {
-      case "City / International":
-        return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 shrink-0">
-            <Globe size={10} /> Worldwide
-          </span>
-        );
-      case "Division":
-        return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30 shrink-0">
-            <Map size={10} /> Division
-          </span>
-        );
-      case "District (Jela)":
-        return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 shrink-0">
-            <Building2 size={10} /> District
-          </span>
-        );
-      case "Upazila / Thana":
-        return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30 shrink-0">
-            <Navigation size={10} /> Upazila / Thana
-          </span>
-        );
-      default:
-        return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-[#EF5246]/20 text-[#FF7A75] border border-[#EF5246]/30 shrink-0">
-            <MapPin size={10} /> Area
-          </span>
-        );
-    }
-  };
 
   return (
     <div className="flex flex-col gap-6">
@@ -631,7 +590,6 @@ export const BusinessInfoStep: React.FC = () => {
                         <span className="text-[11px] text-white/60 truncate">{item.description}</span>
                       </div>
                     </div>
-                    {renderBadge(item)}
                   </div>
                 ))
               ) : (
