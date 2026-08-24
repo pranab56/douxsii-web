@@ -545,7 +545,7 @@ export const BusinessInfoStep: React.FC = () => {
             <div className="relative">
               <Input
                 type="text"
-                placeholder="Search any location (e.g. Natore, Dhaka, Dubai)"
+                placeholder="Search any location"
                 hasError={!!locationError}
                 {...register("city")}
                 onFocus={() => {
