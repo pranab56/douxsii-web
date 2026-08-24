@@ -559,7 +559,7 @@ export const BusinessInfoStep: React.FC = () => {
                   size={16}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-emerald-400"
                 />
-              ) : (
+              ) : ( 
                 <MapPin
                   size={16}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40"
@@ -577,7 +577,7 @@ export const BusinessInfoStep: React.FC = () => {
                   Searching locations...
                 </div>
               ) : suggestions.length > 0 ? (
-                suggestions.map((item, idx) => (
+                suggestions.map((item, idx) => (  
                   <div
                     key={idx}
                     onClick={() => handleSelectSuggestion(item)}
