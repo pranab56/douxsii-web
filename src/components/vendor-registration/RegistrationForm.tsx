@@ -15,7 +15,7 @@ import { registrationSchema } from "../../lib/schema";
 import { useCreatePartnerRequestMutation } from "@/features/contact/contactApi";
 
 const STEP_FIELDS: Record<number, string[]> = {
-  1: ["businessName", "city", "phone", "email"],
+  1: ["businessName", "city", "phone", "email", "isLocationSelected"],
   2: ["storeName", "storeDescription", "storeUrl"],
   3: ["tradeLicense"],
   4: ["fullName", "whatsApp"],
@@ -30,7 +30,7 @@ export const RegistrationForm: React.FC = () => {
   const methods = useForm({
     resolver: zodResolver(registrationSchema),
     mode: "onChange",
-    defaultValues: { categories: [], tradeLicense: null },
+    defaultValues: { categories: [], tradeLicense: null, isLocationSelected: false },
   });
   const { trigger, handleSubmit } = methods;
 

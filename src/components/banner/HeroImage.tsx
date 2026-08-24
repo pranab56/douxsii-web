@@ -48,6 +48,7 @@ export const HeroImage: React.FC = () => {
             alt="Luxury flowers"
             fill
             priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 500px, 584px"
             className="object-cover hover:scale-105 transition-transform duration-[1500ms]"
           />
         </div>

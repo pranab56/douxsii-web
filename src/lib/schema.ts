@@ -18,6 +18,9 @@ export const registrationSchema = z.object({
   latitude: z.string().optional(),
   longitude: z.string().optional(),
   address: z.string().optional(),
+  isLocationSelected: z
+    .boolean()
+    .refine((val) => val === true, "Please select a valid location from the auto-suggestions list"),
 });
 
 export type RegistrationSchemaType = z.infer<typeof registrationSchema>;
