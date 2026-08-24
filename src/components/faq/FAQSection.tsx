@@ -60,7 +60,7 @@ export const FAQSection: React.FC = () => {
           <Button
             variant="outline"
             onClick={() => setShowAll(!showAll)}
-            className="border-[#63000e] text-[#63000e] transition-all duration-300 px-6 rounded-full text-xs font-sans tracking-wide flex items-center gap-1.5"
+            className="border-[#63000e] text-[#63000e] cursor-pointer transition-all duration-300 px-6 rounded-full text-xs font-sans tracking-wide flex items-center gap-1.5"
           >
             {showAll ? (
               <>
