@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { useFormContext } from "react-hook-form";
+import { useFormContext, Controller } from "react-hook-form";
 import { FormField } from "../ui/FormField";
 import { FormTitle } from "../ui/FormTitle";
 import { Input } from "../ui/Input";
+import { CustomPhoneInput } from "../ui/PhoneInput";
 import { MapPin, Loader2, CheckCircle2, Building2, Map, Navigation, Globe, PlusCircle } from "lucide-react";
 
 declare global {
@@ -167,6 +168,7 @@ const GOOGLE_MAPS_KEY =
 export const BusinessInfoStep: React.FC = () => {
   const {
     register,
+    control,
     setValue,
     watch,
     clearErrors,
@@ -602,11 +604,17 @@ export const BusinessInfoStep: React.FC = () => {
         </div>
 
         <FormField label="Phone Number" required error={errors.phone?.message as string}>
-          <Input
-            type="text"
-            placeholder="Enter your phone number"
-            hasError={!!errors.phone}
-            {...register("phone")}
+          <Controller
+            name="phone"
+            control={control}
+            render={({ field }) => (
+              <CustomPhoneInput
+                value={field.value || ""}
+                onChange={field.onChange}
+                hasError={!!errors.phone}
+                placeholder="Enter your phone number"
+              />
+            )}
           />
         </FormField>
       </div>
