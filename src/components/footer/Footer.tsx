@@ -101,6 +101,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto border-t border-[#EF524626] mt-12 pt-6 text-center md:text-left">
         <p className="text-[11px] text-[#F5E8FFB2]">© 2026 Douxsii Luxury Marketplace. All rights reserved.</p>
       </div>
+
     </footer>
   );
 };
