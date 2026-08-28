@@ -51,15 +51,6 @@ export const DocumentsStep: React.FC = () => {
         onDrop={handleDrop}
         onClick={() => {
           fileInputRef.current?.click();
-          // Fallback for headless browser testing: if no file is selected after 1 sec, mock one
-          setTimeout(() => {
-            if (!watch("tradeLicense")) {
-              const mockFile = new File(["mock content"], "trade_license_mock.pdf", {
-                type: "application/pdf",
-              });
-              setValue("tradeLicense", mockFile, { shouldValidate: true });
-            }
-          }, 1000);
         }}
         className={`w-full py-10 px-6 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 ${
           isDragActive 
