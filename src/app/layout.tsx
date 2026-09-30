@@ -3,7 +3,7 @@ import "./globals.css";
 import { ReduxProvider } from "./providers";
 
 export const metadata: Metadata = {
-  title: "douxsii_web",
+  title: "Douxsii",
   description: "A Next.js Web App",
 };
 
