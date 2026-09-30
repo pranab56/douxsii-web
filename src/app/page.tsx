@@ -38,12 +38,12 @@ export default function Home() {
             <Pill>Vendor Registration</Pill>
             <SectionTitle
               text="Start Your"
-              highlightText="Doxie Journey"
+              highlightText="Denior Journey"
               highlightColor="text-[#FF7A75]"
               className="mb-4"
             />
             <SectionSubtitle className="max-w-md">
-              Join 100+ vendors already growing their luxury brands on Doxie.
+              Join 100+ vendors already growing their luxury brands on Denior.
             </SectionSubtitle>
           </div>
           <RegistrationForm />

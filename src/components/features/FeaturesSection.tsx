@@ -60,10 +60,10 @@ const FEATURES_DATA = [
 export const FeaturesSection: React.FC = () => {
   return (
     <section id="features" className="w-full max-w-7xl mx-auto py-10 px-6 sm:px-12 flex flex-col items-center text-center z-10 relative">
-      <Pill>Why Sell on Douxsii</Pill>
+      <Pill>Why Sell on Denior</Pill>
       <SectionTitle text="Everything You Need to" highlightText="Succeed" className="mb-4" />
       <SectionSubtitle className="mb-16">
-        Doxie gives you the tools, audience, and infrastructure to scale your luxury brand effortlessly.
+        Denior gives you the tools, audience, and infrastructure to scale your luxury brand effortlessly.
       </SectionSubtitle>
 
       {/* Responsive feature grid */}

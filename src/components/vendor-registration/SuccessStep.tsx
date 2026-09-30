@@ -16,7 +16,7 @@ export const SuccessStep: React.FC = () => {
 
       {/* Success Description */}
       <p className="text-xs sm:text-sm text-slate-400 font-light leading-relaxed max-w-md">
-        Thank you for applying to become a Doxie vendor. Our team will review your
+        Thank you for applying to become a Denior vendor. Our team will review your
         application and get back to you within 24-48 hours. Welcome to the luxury
         marketplace!
       </p>

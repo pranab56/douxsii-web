@@ -73,8 +73,8 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col gap-4">
             <FooterTitle>Contact Us</FooterTitle>
             <div className="flex flex-col gap-3 text-xs sm:text-[13px] text-[#F5E8FF73] font-normal">
-              <a href="mailto:vendors@doxie.ae" className="flex items-center gap-2.5 hover:text-white transition-colors duration-200">
-                <Mail size={14} className="text-[#FF7A75]" /> vendors@doxie.ae
+              <a href="mailto:vendors@denior.ae" className="flex items-center gap-2.5 hover:text-white transition-colors duration-200">
+                <Mail size={14} className="text-[#FF7A75]" /> vendors@denior.ae
               </a>
               <a href="tel:+97140000000" className="flex items-center gap-2.5 hover:text-white transition-colors duration-200">
                 <Phone size={14} className="text-[#FF7A75]" /> +971 4 000 0000
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
 
       {/* Copyright */}
       <div className="max-w-7xl mx-auto border-t border-[#EF524626] mt-12 pt-6 text-center md:text-left">
-        <p className="text-[11px] text-[#F5E8FFB2]">© 2026 Douxsii Luxury Marketplace. All rights reserved.</p>
+        <p className="text-[11px] text-[#F5E8FFB2]">© 2026 Denior Luxury Marketplace. All rights reserved.</p>
       </div>
 
     </footer>

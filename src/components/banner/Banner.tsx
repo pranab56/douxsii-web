@@ -24,7 +24,7 @@ export const Banner: React.FC = () => {
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-white leading-[1.15] font-serif">
           Grow Your Business <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-rose-500 to-amber-500">
-            with Douxsii
+            with Denior
           </span>
         </h1>
 
