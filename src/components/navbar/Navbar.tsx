@@ -24,8 +24,8 @@ export const Navbar: React.FC = () => {
         <Image
           src="/logo.png"
           alt="Brand Logo"
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
           priority
           className="h-10 sm:h-11 md:h-13 w-auto object-contain shrink-0"
         />
